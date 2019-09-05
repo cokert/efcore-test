@@ -7,7 +7,8 @@ namespace efcore_test {
         public DbSet<TestTable> TestTables {get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
-            optionsBuilder.UseSqlite("Data Source=test.db");
+            optionsBuilder.UseSqlServer("Data Source=localhost;database=TestDb;uid=sa;pwd=D@Finch!;application name=testapp;");
+            //optionsBuilder.UseSqlite("Data Source=test.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {

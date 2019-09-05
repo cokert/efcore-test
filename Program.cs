@@ -27,7 +27,7 @@ namespace efcore_test
         }
 
         static void PrintSqlAndRun<T>(IQueryable<T> query) where T : class {
-            Console.WriteLine(query.ToSql().sql);
+            //Console.WriteLine(query.ToSql().sql);
             query.ToList();
         }
     }
